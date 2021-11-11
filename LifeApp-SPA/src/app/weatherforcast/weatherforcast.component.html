@@ -1,0 +1,21 @@
+
+<div>
+      <table>
+      <tr>
+        <th>Id</th>
+        <th>Date</th>
+        <th>temperatureC</th>
+        <th>temperatureF</th>
+        <th>Summary</th>
+      </tr>
+      <tr *ngFor="let weatherforcast of weatherforcasts">
+        <td>{{weatherforcast.id}}</td>
+        <td>{{weatherforcast.date}}</td>
+        <td>{{weatherforcast.temperatureC}}</td>
+        <td>{{weatherforcast.temperatureF}}</td>
+        <td>{{weatherforcast.summary}}</td>
+      </tr>
+    </table>
+  
+
+</div>
