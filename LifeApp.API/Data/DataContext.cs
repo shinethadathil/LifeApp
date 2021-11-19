@@ -15,6 +15,7 @@ namespace LifeApp.API.Data
 
         //initialize DbSets
         public DbSet<Weather> Weathers { get; set; }
+        public DbSet<User> Users { get; set; }
         
         
     }

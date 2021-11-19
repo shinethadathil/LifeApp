@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LifeApp.API.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace LifeApp.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
@@ -31,6 +33,7 @@ namespace LifeApp.API.Controllers
         }
 
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetWeatherForecastById(int id)
         {
